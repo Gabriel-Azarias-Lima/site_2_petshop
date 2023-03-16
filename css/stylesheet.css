@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+/* EDITAR TODA MAGINA */
+
+*{margin:0; padding:0;}
+
+body{
+
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; /* mecher no tamanho das letras mais tader */
+}
+/* FIM EDITAR TODA PAGINA */
+
+
+/* INICIO DO HEADER */
+
+.simple_header{
+    background-color: #fcfdff;
+    text-align: center /* Posiciona a imagem no centro (não posso usar esse comando direto na tag <img>) */
+}
+ .menu_home{
+    margin-left: 15px;
+ }
+
+.menu ul{
+    list-style: none; /* Remove as listas de stilo */
+    padding: 0;
+    text-align: left; /* Posiciona o menu a esquerda */
+
+}
+
+.menu ul{ /* Edita apenas a Ul dentro do Menu */
+    background-color: #83cdf6; /* Muda a cor dos aredores do elemento */
+}
+
+.menu ul li{
+    font-weight: bold;
+    display: inline-flex; 
+    position: relative; /* determina que o elemento será posicionado de acordo com o fluxo natural da página */
+}
+
+.menu ul li a{ /* Edita apenas a a tag <a> que esta dentro de <ul> que esta dentro de <li> */
+    color: #fff;
+    text-decoration: none; /* Remover a decoração de link do meu texto */
+    padding: 10px; /* Afasta cada conteudo do menu */
+    transition: 0.3s;
+}
+
+.menu ul li:hover{
+    background-color: #0e84c5;
+    border-top: 1px solid #fff;
+    transition: 0.5s;
+}
+
+
+
+/* Submenu 1 */
+
+.sub-menu-1{
+    display: none;
+}
+
+.menu ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: #0a0a0a;
+    margin-top: 35px;
+}
+
+.menu ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 5px;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    
+}
+
+.menu ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+.menu ul li:hover .sub-menu-1 ul li{
+    border-top: none;
+}
+
+.menu ul li:hover .sub-menu-1 ul li a:hover{
+    color: #0e84c5;
+}
+
+.menu ul li:hover .sub-menu-1 ul li:hover{
+border-bottom: 1px solid #fff;
+
+}
+
+/* Fim Submenu 1 */
+
+
+
+/* Submenu 2 */
+
+.sub-menu-2{
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -5px;
+    margin-left: 140px;
+    background: #83cdf6;
+}
+
+/* Fim submenu 2 */
+
+
+
+/* FIM DO HEADER */
+
+
+
+/* Edição do Gif */
+
+
+.div_gif{
+    width: 100%;
+    background-image: url(../icones/gifs/gato.gif);
+    background-size: cover;
+    padding-bottom: 20%;
+    
+
+}
+
+/* Fim da edição do Gif */
+
+
+
+
+
+/* Inicio do Efeito Maquina de Escrever */
+
+.typewriter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15%;
+
+}
+
+.typewriter p{
+    color: #c9e7f7;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    border-right: 4px solid; /* simulado do ponteiro do mouse */
+    width: 33ch; /* Esta relacionado com a quantidade de caracteres */
+    white-space: nowrap; /* faz a linha não ser quebrada */
+    overflow: hidden; /* esconde os caracteres que não foram digitados */
+    animation: typing 2s steps(33), blinking 0.5s infinite step-end alternate; /* typing (tempo da animação) steps (tem que ser relacionado a quantidade de caracteres pois ira animar 1 por vez)  */
+    
+}
+
+/* Redimencionamento do Texto */
+.typewriter p{
+    font-size: 60px;
+  }
+  @media (max-width: 1200px) {
+    .typewriter p { font-size: 1.5em; }
+  }
+  @media (max-width: 768px) {
+    .typewriter p { font-size: 1.1; }
+  }
+  @media (max-width: 468px) {
+    .typewriter p { font-size: 1em; }
+  }
+
+
+
+@keyframes typing{
+    from{ /* configurando a largura que ira terminar em 0 e começar na largura do width do p */
+        width: 0;
+    }
+}
+
+@keyframes blinking{
+    50%{
+        border-color: transparent;
+    }
+}
+
+/* Fim do Efeito Maquina de Escrever */
+
+
+
+/* Continuação edição do meio da pag */
+
+
+/* inicio entraga */
+
+.entrega{
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.entrega img{
+    width: 2rem;   
+}
+
+@media screen and (max-width: 720px){
+  .entrega img{
+    width: 1.50rem;
+  }
+}
+
+
+.entrega blockquote{
+  margin-left: 1%;
+}
+
+.entrega p{
+    
+    font-weight: bold;
+    color: #000000;
+}
+
+.entrega p{
+    font-size: 15px;
+  }
+  @media (max-width: 1200px) {
+    .entrega p { font-size: 0.8em; }
+  }
+  @media (max-width: 768px) {
+    .entrega p { font-size: 1.1; }
+  }
+  @media (max-width: 468px) {
+    .entrega p { font-size: 1em; }
+  }
+
+/* Fim entraga */
+
+
+
+/* carousel */
+
+.carousel{
+    background-color: #c2e2f1;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+  
+  .gallery {
+    background: #c2e2f1;
+  }
+
+  .gallery-cell{ /* adicionando borda */
+    border-radius: 10px;
+  }
+
+  .gallery-cell a img{ /* adicionando borda */
+    border-radius: 10px;
+  }
+  
+  .gallery-cell{
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+
+  .gallery-cell{
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+
+  .gallery-cell{
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+
+  .gallery-cell{
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+
+  .gallery-cell{
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+
+/* Fim carousel */
+
+
+
+/* Carousel + cards */
+
+/* Carousel */
+.h1_recomendados{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 50px;
+  font-size: 30px;
+  font-family: 'Inter', 'sans-serif';
+  color: #042464;
+}
+
+@media (max-width: 720px) {
+  .h1_recomendados{ font-size: 25px; }
+}
+
+@media (max-width: 320px) { /* responsivo celular */
+  .h1_recomendados{ font-size: 20px; }
+}
+
+.gallery_card {
+  background: #fff;
+  padding-top: 30px;
+}
+
+
+
+.gallery-cell_cards{ /* adicionando borda */
+  border-radius: 10px;
+}
+
+.gallery-cell_cards a img{ /* adicionando borda */
+  border-radius: 10px;
+}
+
+.gallery-cell_cards{
+  width: 66%;
+  height: 400px;
+  margin-right: -450px;
+
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell_cards{
+  width: 66%;
+  height: 400px;
+  margin-right: -450px;
+  
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell_cards{
+  width: 66%;
+  height: 400px;
+  margin-right: -450px;
+  
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell_cards{
+  width: 66%;
+  height: 400px;
+  margin-right: -450px;
+  
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell_cards{
+  width: 66%;
+  height: 400px;
+  margin-right: -450px;
+  
+  counter-increment: gallery-cell;
+}
+
+/* cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 350px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Inter', 'sans-serif';
+  background-color: #fff;
+}
+
+
+
+
+
+.card h1{
+  padding-top: 10px;
+  height: 80px;
+  
+}
+
+.card h1{
+  font-size: 15px;
+}
+
+
+.prince-2{
+  color: grey;
+  font-size: 15px;
+  text-decoration:line-through;
+  padding-bottom: 10px;
+}
+
+
+.price {
+  font-weight: bold;
+  color: #0e84c5;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #08527b;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+
+.card button:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+
+
+@media (max-width: 1280px) { /* responsivo PC */
+  .gallery-cell_cards {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) { /* responsivo Tablete */
+  .gallery-cell_cards {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 320px) { /* responsivo celular */
+  .gallery-cell_cards {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+ /* Parceiros na pagina index */
+
+.h1_parcerias{
+  text-align: center;
+  margin-top: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 25px;
+  font-family: 'Inter', 'sans-serif';
+  color: #042464;
+  background-color: #83cdf6;
+}
+
+@media (max-width: 720px) {
+  .h1_parcerias{ font-size: 17px; }
+}
+
+@media (max-width: 320px) { /* responsivo celular */
+  .h1_parcerias{ font-size: 15px; }
+}
+
+.container{
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7f6ff;
+
+}
+
+.image-container {
+  overflow-x: hidden;
+  max-width: 668px;
+}
+.image-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+  grid-gap: 1.5rem;
+  position: relative;
+  left: 0;
+  transition: .3s;
+}
+.image-wrapper > * {
+  aspect-ratio: 4 / 3;
+}
+.img_par {
+
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  display: block;
+  border-radius: .5rem;
+}
+
+/* FIM parceiros na pagina Index */
+
+
+/* Fim edição do meio da pag */
+
+
+/* Fim pagina Index */
+
+
+
+
+
+/* Pagina parceiros */
+
+.imagem{
+  width: 100%;
+  background-image: url(../imagens/pg_parceiros/parceiros2.jpg);
+  background-size: cover;
+  background-position: center center; /* ajusta a posição da imagem | evita que a imagem seja cortada*/
+  padding-bottom: 40%;
+}
+
+
+
+/* FIM caroucel parceiros */
+
+
+/* FIM pagina PARCEIROS */
+
+
+/* Inicio do Footer */
+
+:root{
+  /* nome da variavel | cor-variavel*/
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+
+footer {
+  width: 100%;
+  /* aplicando a variavel */
+  color: var(--color-neutral-40);
+
+  font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.footer-link{
+  text-decoration: none;
+}
+
+#footer_content{
+  background-color: var(--color-neutral-10);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+
+#footer_contacts{
+  margin-bottom: 0.75rem;
+}
+
+.footer_social_media{
+  display: flex;
+  gap: 2rem; /*define os espaços entre as linhas e colunas*/
+  margin-top: 1.5rem;
+}
+
+.footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color-neutral-40);
+  border-radius: 50%; /* faz uma borda redonda envolta dos icones */
+  transition: all 0.4s; /* adiciona uma transição ao passar o mause nos icones */
+}
+
+.footer_social_media .footer-link i{ /* muda o tamanho dos icones */
+  font-size: 1.25rem;
+}
+
+.footer_social_media .footer-link:hover{ /* adiciona opacidade ao passar o mouse nos icones */
+  opacity: 0.8;
+}
+
+#instagram { /* muda a cor de fundo do instagram */
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook{ /* muda a cor de fundo do facebook */
+  background-color: #4267b3;
+}
+
+#github{ /* muda a cor de fundo do github */
+  background-color: black;
+}
+
+.footer_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer_list .footer-link{
+  color: var(--color-neutral-30);
+  transition: all 0.4s;
+}
+
+.footer_list .footer-link:hover{
+  color: #0e84c5;
+}
+
+#footer_subscribe{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#footer_subscribe p{
+  color: var(--color-neutral-30);
+  
+}
+
+#input_group {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-neutral-0);
+  border-radius: 4px;
+}
+
+#input_group input{
+  all:unset;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+#input_group button{
+  background-color: #08527b;
+  border: none;
+  color: var(--color-neutral-40);
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#input_group button:hover{
+  opacity: 0.8;
+}
+
+#footer_copyright{
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-neutral-0);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+}
+
+
+@media screen and (max-width: 768px) {
+  #footer_content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #footer_content {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+  }
+}
+
+/* Fim do footer */
