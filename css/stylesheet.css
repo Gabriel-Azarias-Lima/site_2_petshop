@@ -649,39 +649,12 @@ footer {
   gap: 1.5rem;
 }
 
-#footer_subscribe p{
-  color: var(--color-neutral-30);
-  
+
+#input_group img{
+  border-radius: 5px;
 }
 
-#input_group {
-  display: flex;
-  align-items: center;
-  background-color: var(--color-neutral-0);
-  border-radius: 4px;
-}
 
-#input_group input{
-  all:unset;
-  padding: 0.75rem;
-  width: 100%;
-}
-
-#input_group button{
-  background-color: #08527b;
-  border: none;
-  color: var(--color-neutral-40);
-  padding: 0px 1.25rem;
-  font-size: 1.125rem;
-  height: 100%;
-  border-radius: 0px 4px 4px 0px;
-  cursor: pointer;
-  transition: all 0.4s;
-}
-
-#input_group button:hover{
-  opacity: 0.8;
-}
 
 #footer_copyright{
   display: flex;
@@ -695,7 +668,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   #footer_content {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 2rem;
   }
 }
